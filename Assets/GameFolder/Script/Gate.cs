@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace MoneyTransfer
 {
@@ -47,11 +48,29 @@ namespace MoneyTransfer
         private float lastAmount;
         [HideInInspector]
         public Sprite sprite;
+        TextMeshProUGUI textGate;
 
         private void Start()
         {
             Canvas canvas = transform.GetComponentInChildren<Canvas>();
-            sprite = canvas.transform.GetChild(0).GetComponent<Image>().sprite;
+            //sprite = canvas.transform.GetChild(0).GetComponent<Image>().sprite;
+            textGate = canvas.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            if (gateMath == GateMath.Addition) // toplama
+            {
+                textGate.text = "+" + amount;
+            }
+            else if (gateMath == GateMath.Divide) // bölme
+            {
+                textGate.text = "/" + amount;
+            }
+            else if (gateMath == GateMath.Minus) // çýkarma
+            {
+                textGate.text = "-" + amount;
+            }
+            else if (gateMath == GateMath.Multiplication) //çarpma
+            {
+                textGate.text = "x" + amount;
+            }
         }
 
         public float GetAmount(float currentAmount)

@@ -77,16 +77,17 @@ namespace MoneyTransfer
             if (state)
             {
                 handControl.SetSpeed(true);
-                Observer.OnChangeForPano?.Invoke();
-                investPanelHolder.DOMove(showPos.position, duration).OnComplete(() => isPanoMovement = true).SetUpdate(UpdateType.Normal);
+                // Observer.OnChangeForPano?.Invoke();
+                isPanoMovement = true;
+                //investPanelHolder.DOMove(showPos.position, duration).OnComplete(() => isPanoMovement = true).SetUpdate(UpdateType.Normal);
             }
             else
             {
                 handControl.SetSpeed(false);
-                Observer.OnChangeForInitial?.Invoke();
+                //Observer.OnChangeForInitial?.Invoke();
                 rightRenderer.positionCount = 0;
                 leftRenderer.positionCount = 0;
-                investPanelHolder.DOMove(hidePos.position, duration).OnComplete(() => ResetProperty()).SetUpdate(UpdateType.Normal);
+                //investPanelHolder.DOMove(hidePos.position, duration).OnComplete(() => ResetProperty()).SetUpdate(UpdateType.Normal);
             }
         }
 
@@ -112,14 +113,14 @@ namespace MoneyTransfer
             {
                 rightRenderer.material.color = Color.green;
                 rightInvestArrow.color = Color.green;
-               //ightInvestHightText.text = textInfo;
+                //ightInvestHightText.text = textInfo;
                 rightInvestHightText.gameObject.SetActive(false);
             }
             else
             {
                 rightRenderer.material.color = Color.red;
                 rightInvestArrow.color = Color.red;
-               //ightInvestLowText.text = textInfo;
+                //ightInvestLowText.text = textInfo;
                 rightInvestLowText.gameObject.SetActive(false);
             }
         }
@@ -131,20 +132,20 @@ namespace MoneyTransfer
             rightRenderer.positionCount = 1;
             rightRenderer.SetPosition(0, path[0].localPosition);
 
-            for (int i = 0; i < path.Length; i++)
-            {
-                bool isDone = false;
+            //for (int i = 0; i < path.Length; i++)
+            //{
+            //    bool isDone = false;
 
-                if (i != 0)
-                {
-                    rightRenderer.positionCount++;
-                    rightRenderer.SetPosition(rightRenderer.positionCount - 1, rightHand.localPosition);
-                    Transform targetPath = path[i];
-                    rightHand.rotation = Quaternion.Euler(new Vector3(0, 0, FindAngle(targetPath.position, rightHand.position)));
-                    rightHand.DOLocalMove(targetPath.localPosition, moveDuration).SetEase(Ease.Linear).OnComplete(() => isDone = true).OnUpdate(() => rightRenderer.SetPosition(i, rightHand.localPosition));
-                    yield return new WaitUntil(() => isDone == true);
-                }
-            }
+            //    if (i != 0)
+            //    {
+            //        rightRenderer.positionCount++;
+            //        rightRenderer.SetPosition(rightRenderer.positionCount - 1, rightHand.localPosition);
+            //        Transform targetPath = path[i];
+            //        rightHand.rotation = Quaternion.Euler(new Vector3(0, 0, FindAngle(targetPath.position, rightHand.position)));
+            //        rightHand.DOLocalMove(targetPath.localPosition, moveDuration).SetEase(Ease.Linear).OnComplete(() => isDone = true).OnUpdate(() => rightRenderer.SetPosition(i, rightHand.localPosition));
+            //        yield return new WaitUntil(() => isDone == true);
+            //    }
+            //}
             textComponent.SetActive(true);
             yield return new WaitForSeconds(waitAfterProcess);
             OpenInvestPanel(false);
@@ -193,20 +194,20 @@ namespace MoneyTransfer
             leftRenderer.positionCount = 1;
             leftRenderer.SetPosition(0, path[0].localPosition);
 
-            for (int i = 0; i < path.Length; i++)
-            {
-                bool isDone = false;
+            //for (int i = 0; i < path.Length; i++)
+            //{
+            //    bool isDone = false;
 
-                if (i != 0)
-                {
-                    leftRenderer.positionCount++;
-                    leftRenderer.SetPosition(leftRenderer.positionCount - 1, leftHand.localPosition);
-                    Transform targetPath = path[i];
-                    leftHand.rotation = Quaternion.Euler(new Vector3(0, 0, FindAngle(targetPath.position, leftHand.position)));
-                    leftHand.DOLocalMove(targetPath.localPosition, moveDuration).SetEase(Ease.Linear).OnComplete(() => isDone = true).OnUpdate(() => leftRenderer.SetPosition(i, leftHand.localPosition));
-                    yield return new WaitUntil(() => isDone == true);
-                }
-            }
+            //    if (i != 0)
+            //    {
+            //        leftRenderer.positionCount++;
+            //        leftRenderer.SetPosition(leftRenderer.positionCount - 1, leftHand.localPosition);
+            //        Transform targetPath = path[i];
+            //        leftHand.rotation = Quaternion.Euler(new Vector3(0, 0, FindAngle(targetPath.position, leftHand.position)));
+            //        leftHand.DOLocalMove(targetPath.localPosition, moveDuration).SetEase(Ease.Linear).OnComplete(() => isDone = true).OnUpdate(() => leftRenderer.SetPosition(i, leftHand.localPosition));
+            //        yield return new WaitUntil(() => isDone == true);
+            //    }
+            //}
             textComponent.SetActive(true);
             yield return new WaitForSeconds(waitAfterProcess);
             OpenInvestPanel(false);
