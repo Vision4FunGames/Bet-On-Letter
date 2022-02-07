@@ -49,12 +49,19 @@ namespace MoneyTransfer
         [HideInInspector]
         public Sprite sprite;
         TextMeshProUGUI textGate;
+        public bool isHarfGate;
 
         private void Start()
         {
             Canvas canvas = transform.GetComponentInChildren<Canvas>();
             //sprite = canvas.transform.GetChild(0).GetComponent<Image>().sprite;
             textGate = canvas.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+
+            if(isHarfGate)
+            {
+                textGate.gameObject.SetActive(false);
+            }
+
             if (gateMath == GateMath.Addition) // toplama
             {
                 textGate.text = "+" + amount;

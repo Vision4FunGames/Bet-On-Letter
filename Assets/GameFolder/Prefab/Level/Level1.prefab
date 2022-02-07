@@ -99,6 +99,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &830261940585704543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570130149469907818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7977066714986616521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525199722225937970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &634745447810468320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,6 +482,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gates (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8407330176815306816, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8407330176815306817, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
         type: 3}
       propertyPath: m_RootOrder
@@ -559,6 +588,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gates (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8407330176815306816, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8407330176815306817, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
         type: 3}
       propertyPath: m_RootOrder
@@ -626,6 +660,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d, type: 3}
+--- !u!1 &570130149469907818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8407330176815306816, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8306137557605511978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &570130149469907819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8407330176815306817, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
@@ -648,6 +688,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gates
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407330176815306816, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8407330176815306817, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
         type: 3}
@@ -706,6 +751,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d, type: 3}
+--- !u!1 &525199722225937970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8407330176815306816, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8351138383809394290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &525199722225937971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8407330176815306817, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,

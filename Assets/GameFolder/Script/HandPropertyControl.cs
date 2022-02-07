@@ -28,11 +28,27 @@ namespace MoneyTransfer
             if (Physics.Raycast(ray, out hit, 50, bitmask))
             {
                 collider = hit.collider;
+                if (hit.collider.tag == "HarfGate")
+                {
+                    print("a");
+                }
             }
 
             return collider;
         }
-
+        public void RaycastHarfGate()
+        {
+            Collider collider = null;
+            int bitmask = 1 << 8;
+            Ray ray = new Ray(transform.position + new Vector3(0, GameManager.Instance.characterOffsetForFinish, 0), transform.forward * 10);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 50, bitmask))
+            {
+                
+            }
+           
+        }
+       
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;

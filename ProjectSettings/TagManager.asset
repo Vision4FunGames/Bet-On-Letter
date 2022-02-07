@@ -16,6 +16,8 @@ TagManager:
   - UIHitRed
   - UICamera
   - UI/LevelText
+  - HarfGate
+  - textGate
   layers:
   - Default
   - TransparentFX
