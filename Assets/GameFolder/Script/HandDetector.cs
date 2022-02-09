@@ -69,11 +69,17 @@ namespace MoneyTransfer
 
             MoneyPack moneyPack = other.GetComponent<MoneyPack>();
 
-            if(moneyPack != null)
+            if (moneyPack != null)
             {
                 VibrationManager.Instance.VibratePop();
                 _moneySeparate.HandleMoney(_handBaseControl, GateMath.Addition, GameManager.Instance.moneyPackIncreaseCount, true);
                 moneyPack.DestroyMoney();
+            }
+            MýknatýsScript ms = other.GetComponent<MýknatýsScript>();
+            if (ms != null)
+            {
+                VibrationManager.Instance.VibratePop();
+                _moneySeparate.HandleMoney2(_handBaseControl, ms.transform.GetChild(2).gameObject, GateMath.Minus, 2, true);
             }
         }
 

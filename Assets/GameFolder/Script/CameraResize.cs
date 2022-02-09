@@ -58,8 +58,8 @@ namespace MoneyTransfer
         {
             if (isChange)
             {
-                Move();
-                Zoom();
+                //Move();
+               // Zoom();
             }
         }
 

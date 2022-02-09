@@ -112,6 +112,27 @@ namespace MoneyTransfer
                 }
             }
         }
+        public void HandleMoney2(HandStackControl handBaseControl, GameObject target, GateMath gateMath, float amount, bool isPack = false)
+        {
+            if (handBaseControl.moneyList.Count > 0 || isPack == true)
+            {
+                if (gateMath == GateMath.Addition || gateMath == GateMath.Multiplication)
+                {
+                    for (int i = 0; i < amount; i++)
+                    {
+                        Money money = _objectPool.GetMoney();
+                        money.handStackControl = handBaseControl;
+                        money.transform.localPosition = new Vector3(handBaseControl.handPoint.localPosition.x, handBaseControl.currentHeight, handBaseControl.handPoint.localPosition.z);
+                        AddToManagerList(money);
+                        if (money != null) handBaseControl.AddToList(money);
+                    }
+                }
+                else
+                {
+                    handBaseControl.DetectNegativeGate2((int)amount,target);
+                }
+            }
+        }
         #endregion
 
         #region SendMoneyToLeftHand

@@ -128,6 +128,11 @@ namespace MoneyTransfer
             List<Money> moneyList = GetMoneyContainer(amount);
             StartCoroutine(DetectNegativeGate(moneyList));
         }
+        public void DetectNegativeGate2(int amount,GameObject target)
+        {
+            List<Money> moneyList = GetMoneyContainer(amount);
+            StartCoroutine(DetectNegativeGate2(moneyList,target));
+        }
 
         IEnumerator DetectNegativeGate(List<Money> moneyList)
         {
@@ -144,6 +149,7 @@ namespace MoneyTransfer
 
                 for (int i = 0; i < moneyList.Count; i++)
                 {
+                    print("paraAtýldý");
                     yield return _handPropertyControl.coroutineDelay;
                     Money money = moneyList[i];
                     Vector3 movePosition = new Vector3(Random.Range(-_handPropertyControl.gateSeperateOffsetX, _handPropertyControl.gateSeperateOffsetX),
@@ -154,7 +160,32 @@ namespace MoneyTransfer
                 }
             }
         }
+        IEnumerator DetectNegativeGate2(List<Money> moneyList,GameObject target)
+        {
+            if (moneyList != null)
+            {
+                for (int i = 0; i < moneyList.Count; i++)
+                {
+                    Money tempMoney = moneyList[i];
+                    tempMoney.isGetHit = true;
+                    RemoveToList(tempMoney);
+                    _moneySeperate.RemoveManagerList(tempMoney);
+                    tempMoney.transform.SetParent(null);
+                }
 
+                for (int i = 0; i < moneyList.Count; i++)
+                {
+                    yield return _handPropertyControl.coroutineDelay;
+                    Money money = moneyList[i];
+                    money.transform.SetParent(null);
+                    Vector3 movePosition = target.transform.localPosition;
+                    money.transform.DOMove(movePosition,1.5f).SetRelative().SetEase(Ease.OutQuart).OnComplete(() => money.DestroyAndGoPool());
+                    Vector3 randomRotate = new Vector3(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f));
+                    money.transform.DORotate(new Vector3(90, 0, 90), 1f);
+                    //money.transform.DORotate(randomRotate * 360, _handPropertyControl.rotateProcessDuration, RotateMode.FastBeyond360).SetRelative().SetEase(Ease.Linear).SetLoops(10, LoopType.Restart);
+                }
+            }
+        }
 
         public void HitTheObstacle()
         {
