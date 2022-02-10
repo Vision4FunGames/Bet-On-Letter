@@ -1,7 +1,6 @@
-    using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using NaughtyAttributes;
 using UnityEngine;
 using MoneyTransfer;
 using DG.Tweening;
@@ -20,7 +19,7 @@ namespace MoneyTransfer
         private bool _isStackProgress;
         private bool _isAllProgress;
         private bool _isActive = false;
-        [HideInInspector]  
+        [HideInInspector]
         public bool isMoneyTransfer = true;
         [HideInInspector]
         public float mouseX;
@@ -74,7 +73,7 @@ namespace MoneyTransfer
                 if (isMoneyTransfer)
                 {
                     FingerControl();
-                }              
+                }
                 Movement();
             }
         }

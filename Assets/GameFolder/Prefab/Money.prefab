@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3805c422cb88ce438b1bcc119c67283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _child: {fileID: 6297865063249043058}
+  _child: {fileID: 543450652700831032}
   handStackControl: {fileID: 0}
   isGetHit: 0
 --- !u!1001 &1033013971

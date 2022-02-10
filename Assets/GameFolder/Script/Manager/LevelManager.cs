@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using ElephantSDK;
+//using ElephantSDK;
 
 namespace MoneyTransfer
 {
@@ -65,7 +65,7 @@ namespace MoneyTransfer
 
             //if (ElephantIOS.getConsentStatus() == "Authorized")
             //{
-            Elephant.LevelStarted(levelCount);
+         //   Elephant.LevelStarted(levelCount);
             //    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "Level", levelCount);
             //}
         }
@@ -117,7 +117,7 @@ namespace MoneyTransfer
 
             //if (ElephantIOS.getConsentStatus() == "Authorized")
             //{
-            Elephant.LevelCompleted(levelCount);
+        //    Elephant.LevelCompleted(levelCount);
             //    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Level", levelCount);
             //    GameAnalytics.StopTimer(lastTime.ToString() + "Win Time");
             //}
@@ -145,7 +145,7 @@ namespace MoneyTransfer
             //{
             //    GameAnalytics.StopTimer(lastTime.ToString() + "Failed Time");
             //    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "Level", levelCount);
-            Elephant.LevelFailed(levelCount);
+          //  Elephant.LevelFailed(levelCount);
             //}
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

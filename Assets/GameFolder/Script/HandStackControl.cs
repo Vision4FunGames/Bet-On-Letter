@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using NaughtyAttributes;
 using System.Linq;
 
 namespace MoneyTransfer
@@ -13,7 +12,7 @@ namespace MoneyTransfer
         [SerializeField] private CountDisplay countDisplay;
         public Transform handPoint;
         public bool isRefresh = false;
-        [HorizontalLine(5)] [SerializeField] private int testCount = 10;
+        [SerializeField] private int testCount = 10;
         private HandPropertyControl _handPropertyControl;
         [HideInInspector]
         public float currentHeight;

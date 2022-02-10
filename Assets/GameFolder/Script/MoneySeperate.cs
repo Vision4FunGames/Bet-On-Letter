@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using NaughtyAttributes;
 using MoneyTransfer;
 using UnityEngine.Events;
 
@@ -49,7 +48,6 @@ namespace MoneyTransfer
             Invoke(nameof(SpawnMoneyToHand), .1f);
         }
 
-        [Button]
         private void SpawnMoneyToHand()
         {
             for (int i = 0; i < spawnCountForLeft; i++)

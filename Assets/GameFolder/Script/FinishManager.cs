@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MoneyTransfer;
 using DG.Tweening;
+using TMPro;
 
 namespace MoneyTransfer
 {
@@ -11,6 +12,7 @@ namespace MoneyTransfer
         [HideInInspector]
         public List<Money> finishMoneyList = new List<Money>();
         public Transform targetPoint;
+        public Transform slotMachineEntry;
         [SerializeField] Transform player;
         private const float high = 0.1f;
         private WaitForSeconds delay = new WaitForSeconds(0.01f);
@@ -21,10 +23,13 @@ namespace MoneyTransfer
         private bool isMaxHeight;
         private HandPropertyControl handPropertyControl;
         public float finishHigh;
+        public TextMeshProUGUI slotMachineText;
+        public int slotMachineCount;
 
         private void Start()
         {
             handPropertyControl = FindObjectOfType<HandPropertyControl>();
+
         }
 
 

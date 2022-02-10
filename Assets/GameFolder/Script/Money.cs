@@ -51,13 +51,14 @@ namespace MoneyTransfer
         {
             Vector3 targetPoint = finishManager.targetPoint.position;
             Vector3 jumpPosition = Vector3.zero;
-            if (index == 0) jumpPosition = finishManager.targetPoint.position;
-            else jumpPosition = new Vector3(targetPoint.x, targetPoint.y + index * finishManager.finishHigh, targetPoint.z);
-
-            _child.DORotate(new Vector3(180, 0, 0), GameManager.Instance.transferDurationForFinish).SetRelative();
+            if (index == 0) jumpPosition = finishManager.slotMachineEntry.position;
+            else jumpPosition = finishManager.slotMachineEntry.position;
+            _child.DORotate(new Vector3(180, 0, 90), GameManager.Instance.transferDurationForFinish).SetRelative();
             transform.DOJump(jumpPosition, GameManager.Instance.jumpPower, 0, GameManager.Instance.transferDurationForFinish).OnComplete(() =>
             {
                 finishManager.currentHeight = transform.position.y;
+                finishManager.slotMachineCount += 1;
+                finishManager.slotMachineText.text = finishManager.slotMachineCount.ToString();
             });
         }
 
@@ -84,11 +85,11 @@ namespace MoneyTransfer
 
         public void DoScaleEffect(bool state)
         {
-            if (state) _child.DOScale(new Vector3(1, 1, 1) * 1.5f, .1f).OnComplete(() => _child.DOScale(Vector3.one, .1f));
-            else _child.DOScale(new Vector3(1, 1, 1) * .5f, .1f).OnComplete(() => _child.DOScale(Vector3.one, .1f));
+            //if (state) _child.DOScale(new Vector3(1, 1, 1) * 1.5f, .1f).OnComplete(() => _child.DOScale(Vector3.one, .1f));
+            //else _child.DOScale(new Vector3(1, 1, 1) * .5f, .1f).OnComplete(() => _child.DOScale(Vector3.one, .1f));
         }
 
-        public void ResetProperty() 
+        public void ResetProperty()
         {
             _child.localEulerAngles = Vector3.zero;
             transform.position = Vector3.zero;

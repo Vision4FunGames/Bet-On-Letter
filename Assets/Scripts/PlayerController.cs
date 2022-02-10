@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
+//using Sirenix.OdinInspector;
 using Lean.Common;
 using PathCreation;
 using DG.Tweening;
@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     float forwardSpeed = 3;
-    [ReadOnly] public bool uiPresent;
+    public bool uiPresent;
     bool levelStarted;
-    [ReadOnly] public bool failed;
+    public bool failed;
     public bool levelFinished;
     Animator animator;
 
