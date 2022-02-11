@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MoneyTransfer;
 using DG.Tweening;
 using TMPro;
 
@@ -29,7 +28,6 @@ namespace MoneyTransfer
         private void Start()
         {
             handPropertyControl = FindObjectOfType<HandPropertyControl>();
-
         }
 
 
@@ -83,11 +81,11 @@ namespace MoneyTransfer
             player.transform.DOMoveZ(targetPoint.position.z, 1f).SetEase(Ease.Linear).OnComplete(() => isReachedToTarget = true);
         }
 
-        public void MoneyTranferProcessDone()
-        {
-            Collider collider = handPropertyControl.FamousCheck();
-            StartCoroutine(Finish(collider.transform));
-        }
+        //public void MoneyTranferProcessDone()
+        //{
+        //    Collider collider = handPropertyControl.FamousCheck();
+        //    StartCoroutine(Finish(collider.transform));
+        //}
 
         IEnumerator Finish(Transform famousObject)
         {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject losePanel;
-    [SerializeField] private GameObject winPanel;
+    [SerializeField] public GameObject winPanel;
     [SerializeField] private Transform tipsPanel;
     [SerializeField] private GameObject pausePanel;
 

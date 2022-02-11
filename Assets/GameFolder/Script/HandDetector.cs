@@ -32,6 +32,7 @@ namespace MoneyTransfer
 
             if (gate != null)
             {
+                print("d");
                 VibrationManager.Instance.VibratePop();
                 _investManager.OpenInvestPanel(true);
                 if (gate.gateMath == GateMath.Addition || gate.gateMath == GateMath.Multiplication)
@@ -62,6 +63,7 @@ namespace MoneyTransfer
 
             if (obstacle != null)
             {
+                print("c");
                 VibrationManager.Instance.VibratePop();
                 _handControl.isMoneyTransfer = false;
                 _handBaseControl.HitTheObstacle();
@@ -71,6 +73,7 @@ namespace MoneyTransfer
 
             if (moneyPack != null)
             {
+                print("b");
                 VibrationManager.Instance.VibratePop();
                 _moneySeparate.HandleMoney(_handBaseControl, GateMath.Addition, GameManager.Instance.moneyPackIncreaseCount, true);
                 moneyPack.DestroyMoney();
@@ -78,6 +81,7 @@ namespace MoneyTransfer
             MýknatýsScript ms = other.GetComponent<MýknatýsScript>();
             if (ms != null)
             {
+                print("a");
                 VibrationManager.Instance.VibratePop();
                 _moneySeparate.HandleMoney2(_handBaseControl, ms.transform.GetChild(2).gameObject, GateMath.Minus, 2, true);
             }

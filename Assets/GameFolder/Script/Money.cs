@@ -16,6 +16,7 @@ namespace MoneyTransfer
         public HandStackControl handStackControl;
         public bool isGetHit;
 
+
         private void Awake()
         {
             Initialize();
@@ -49,6 +50,7 @@ namespace MoneyTransfer
 
         public void JumpToFinishLine(FinishManager finishManager, int index)
         {
+            
             Vector3 targetPoint = finishManager.targetPoint.position;
             Vector3 jumpPosition = Vector3.zero;
             if (index == 0) jumpPosition = finishManager.slotMachineEntry.position;

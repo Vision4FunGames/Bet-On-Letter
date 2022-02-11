@@ -52,7 +52,7 @@ namespace MoneyTransfer
         {
             for (int i = 0; i < spawnCountForLeft; i++)
             {
-                Money moneyForLeft = _objectPool.GetMoney();     
+                Money moneyForLeft = _objectPool.GetMoney();
                 leftHandControl.AddToList(moneyForLeft);
                 moneyForLeft.handStackControl = leftHandControl;
                 AddToManagerList(moneyForLeft);
@@ -67,7 +67,7 @@ namespace MoneyTransfer
             }
         }
 
- 
+
         public void AddToManagerList(Money money)
         {
             managerMoneyList.Add(money);
@@ -127,7 +127,7 @@ namespace MoneyTransfer
                 }
                 else
                 {
-                    handBaseControl.DetectNegativeGate2((int)amount,target);
+                    handBaseControl.DetectNegativeGate2((int)amount, target);
                 }
             }
         }
@@ -222,13 +222,19 @@ namespace MoneyTransfer
 
             for (int i = 0; i < finishMoneyList.Count; i++)
             {
+                if (i == finishMoneyList.Count - 1)
+                {
+                    SlotMachineScript sc = FindObjectOfType<SlotMachineScript>();
+                    sc.StartRotating(i);
+                    //finishManager.slotMachineText
+                }
                 Money money = finishMoneyList[i];
                 money.handStackControl.RemoveToList(money);
                 finishManager.AddToFinishList(money);
-                money.JumpToFinishLine(finishManager, i );
+                money.JumpToFinishLine(finishManager, i);
                 yield return delayForFinish;
             }
-            finishManager.MoneyTranferProcessDone();
+            //finishManager.MoneyTranferProcessDone();
         }
 
         #endregion

@@ -149,7 +149,7 @@ namespace MoneyTransfer
                 for (int i = 0; i < moneyList.Count; i++)
                 {
                     print("paraAtýldý");
-                    yield return _handPropertyControl.coroutineDelay;
+                    yield return 0;
                     Money money = moneyList[i];
                     Vector3 movePosition = new Vector3(Random.Range(-_handPropertyControl.gateSeperateOffsetX, _handPropertyControl.gateSeperateOffsetX),
                         _handPropertyControl.gateSeperateOffsetY, Random.Range(0, -_handPropertyControl.gateSeperateOffsetZ));
@@ -174,11 +174,11 @@ namespace MoneyTransfer
 
                 for (int i = 0; i < moneyList.Count; i++)
                 {
-                    yield return _handPropertyControl.coroutineDelay;
+                    yield return 0;
                     Money money = moneyList[i];
-                    money.transform.SetParent(null);
-                    Vector3 movePosition = target.transform.localPosition;
-                    money.transform.DOMove(movePosition,1.5f).SetRelative().SetEase(Ease.OutQuart).OnComplete(() => money.DestroyAndGoPool());
+                    money.transform.parent = target.transform;
+                    Vector3 movePosition = target.transform.position;
+                    money.transform.DOLocalMove(new Vector3(0,0,0),1.5f).SetEase(Ease.OutQuart).OnComplete(() => money.DestroyAndGoPool());
                     Vector3 randomRotate = new Vector3(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f));
                     money.transform.DORotate(new Vector3(90, 0, 90), 1f);
                     //money.transform.DORotate(randomRotate * 360, _handPropertyControl.rotateProcessDuration, RotateMode.FastBeyond360).SetRelative().SetEase(Ease.Linear).SetLoops(10, LoopType.Restart);
