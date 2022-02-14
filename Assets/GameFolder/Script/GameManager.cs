@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Sprites;
+using UnityEngine.UI;
 
 namespace MoneyTransfer
 {
     public class GameManager : MonoBehaviour
     {
+
         public static GameManager Instance;
         [Range(0f, 1f)]
         public float high; // paraların yükselme mesafesi

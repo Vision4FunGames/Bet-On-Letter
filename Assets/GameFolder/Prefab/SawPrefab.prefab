@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3968299015342854026}
-  - component: {fileID: 4348764481954469171}
-  - component: {fileID: 4348764481954469170}
   - component: {fileID: 985967352194348912}
   m_Layer: 0
   m_Name: SawPrefab
@@ -35,31 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4348764481954469171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348764481954469168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7cd62d03c719e499f33787ef788b07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &4348764481954469170
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348764481954469168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.92, y: 0.28, z: 2.78}
-  m_Center: {x: 0, y: 1.86, z: 0}
 --- !u!114 &985967352194348912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +47,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PosYMinGiyotin: 0
   PosYGiyotin: 2.5
+--- !u!65 &533142006
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902653195090838183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 290.5617, y: 34.14499, z: 276.3407}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &533142007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902653195090838183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b7cd62d03c719e499f33787ef788b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2966569707120019071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902653195090838183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2e8c0b76b273344a737db9e6cc6651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5228427661248915835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902653195090838183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7faa64a828219b44cb0eb5bfbfa83524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateVector: {x: 0, y: 50, z: 0}
+  rotateSpace: 0
+--- !u!114 &6444969664587894471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902653195090838183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b74aadd00d9d549a23e8f134fa334d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: {x: 0, y: 30, z: 0}
+  Speed: 600
 --- !u!1 &6356720686993269481
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,20 +193,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6444969664587894471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5902653195090838183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b74aadd00d9d549a23e8f134fa334d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axis: {x: 0, y: 30, z: 0}
-  Speed: 600
 --- !u!1001 &6444969664587894465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254,7 +278,7 @@ PrefabInstance:
     - target: {fileID: 2359595066214278364, guid: 4007ea9010a96ae448691600fe47e8a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 182
+      value: 332
       objectReference: {fileID: 0}
     - target: {fileID: 2359595066214278364, guid: 4007ea9010a96ae448691600fe47e8a4,
         type: 3}
