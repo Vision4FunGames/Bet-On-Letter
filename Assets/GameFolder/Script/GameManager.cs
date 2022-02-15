@@ -11,11 +11,11 @@ namespace MoneyTransfer
 
         public static GameManager Instance;
         [Range(0f, 1f)]
-        public float high; // paraların yükselme mesafesi
-        public float jumpPower = 1; // paralarin zıplama yüksekliği
-        public int seperateMoneyPerObstacle; // tek cekiste transfer olacak obje sayisi
-        public float characterOffsetForFinish = 1; // bitiste paralarin ve playerin arasindaki offset
-        public int moneyPackIncreaseCount; // money bundlelerin ne kadar para artiracagi
+        public float high; 
+        public float jumpPower = 1; 
+        public int seperateMoneyPerObstacle; 
+        public float characterOffsetForFinish = 1; 
+        public int moneyPackIncreaseCount; 
         private bool isStart = false;
         [Header("Transfer Duration For hand to hand")]
         public float transferDuration;

@@ -148,7 +148,7 @@ namespace MoneyTransfer
 
                 for (int i = 0; i < moneyList.Count; i++)
                 {
-                    print("paraAtýldý");
+                   // print("paraAtýldý");
                     yield return 0;
                     Money money = moneyList[i];
                     Vector3 movePosition = new Vector3(Random.Range(-_handPropertyControl.gateSeperateOffsetX, _handPropertyControl.gateSeperateOffsetX),

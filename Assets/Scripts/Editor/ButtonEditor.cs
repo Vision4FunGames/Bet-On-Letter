@@ -4,7 +4,7 @@ using UnityEditor;
 
 [ExecuteInEditMode]
 [CustomEditor(typeof(ButtonController))]
-public class ButtonEdıtor : Editor
+public class ButtonEditor : Editor
 {
 
     public override void OnInspectorGUI()

@@ -61,19 +61,19 @@ namespace MoneyTransfer
                 textGate.gameObject.SetActive(false);
             }
 
-            if (gateMath == GateMath.Addition) // toplama
+            if (gateMath == GateMath.Addition) 
             {
                 textGate.text = "+" + amount;
             }
-            else if (gateMath == GateMath.Divide) // bölme
+            else if (gateMath == GateMath.Divide) 
             {
                 textGate.text = "/" + amount;
             }
-            else if (gateMath == GateMath.Minus) // çýkarma
+            else if (gateMath == GateMath.Minus)
             {
                 textGate.text = "-" + amount;
             }
-            else if (gateMath == GateMath.Multiplication) //çarpma
+            else if (gateMath == GateMath.Multiplication)
             {
                 textGate.text = "x" + amount;
             }

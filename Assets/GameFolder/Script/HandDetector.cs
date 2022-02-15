@@ -78,7 +78,7 @@ namespace MoneyTransfer
                 _moneySeparate.HandleMoney(_handBaseControl, GateMath.Addition, GameManager.Instance.moneyPackIncreaseCount, true);
                 moneyPack.DestroyMoney();
             }
-            MýknatýsScript ms = other.GetComponent<MýknatýsScript>();
+            MiknatisScript ms = other.GetComponent<MiknatisScript>();
             if (ms != null)
             {
                 print("a");
