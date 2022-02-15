@@ -7689,7 +7689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 1
   currentLevelScriptable: {fileID: 0}
-  isManuel: 1
+  isManuel: 0
   levelIndex: 2
 --- !u!1 &1702410772
 GameObject:
@@ -8678,7 +8678,7 @@ PrefabInstance:
     - target: {fileID: 5438764031895999316, guid: 8e4c70445f6844464891d41fcb3b61d1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 182.38
+      value: 2.130005
       objectReference: {fileID: 0}
     - target: {fileID: 5438764031895999316, guid: 8e4c70445f6844464891d41fcb3b61d1,
         type: 3}
@@ -8718,7 +8718,7 @@ PrefabInstance:
     - target: {fileID: 5438764031895999317, guid: 8e4c70445f6844464891d41fcb3b61d1,
         type: 3}
       propertyPath: thresHold
-      value: 150
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5438764031895999318, guid: 8e4c70445f6844464891d41fcb3b61d1,
         type: 3}
