@@ -18,6 +18,8 @@ TagManager:
   - UI/LevelText
   - HarfGate
   - textGate
+  - canvasMain
+  - MainCanvas
   layers:
   - Default
   - TransparentFX

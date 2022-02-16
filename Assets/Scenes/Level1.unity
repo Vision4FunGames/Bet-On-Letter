@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 3930fc89a28b29746bde6a2389a513e0, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 617d9be015db68348a623b01ea51a8c5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.9897314, g: 0.52100897, b: 0.3396706, a: 1}
+  m_IndirectSpecularColor: {r: 0.7542947, g: 0.72469556, b: 0.8108283, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1757,7 +1757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0.008, y: -0.1, z: -0.219}
   m_AnchorMin: {x: 0.025774112, y: 0.19720724}
   m_AnchorMax: {x: 0.6947741, y: 0.86541444}
-  m_AnchoredPosition: {x: 1.9716187, y: 1.2857971}
+  m_AnchoredPosition: {x: 1.9716187, y: 1.2857666}
   m_SizeDelta: {x: 0.8085022, y: -0.41220093}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1209782999
@@ -1892,7 +1892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.71400005, y: 0.2618964}
   m_AnchorMax: {x: 0.95800006, y: 0.86541444}
-  m_AnchoredPosition: {x: 0.6000061, y: -1.7779999}
+  m_AnchoredPosition: {x: 0.6000061, y: -1.7794037}
   m_SizeDelta: {x: 0.72579956, y: 4.757}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1284769634
@@ -7166,7 +7166,7 @@ GameObject:
   - component: {fileID: 1406032718}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: MainCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7727,9 +7727,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 400}
+  m_AnchoredPosition: {x: 0.00003975703, y: 400.00037}
   m_SizeDelta: {x: 619.9844, y: 243.68774}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 1.0000001}
 --- !u!114 &1702410774
 MonoBehaviour:
   m_ObjectHideFlags: 0

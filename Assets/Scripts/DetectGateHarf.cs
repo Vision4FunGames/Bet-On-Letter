@@ -18,7 +18,7 @@ public class DetectGateHarf : MonoBehaviour
         HarfGateChil hf = other.GetComponent<HarfGateChil>();
         if(hf != null)
         {
-            hf.ShowText();
+            hf.MovementBar();
         }
     }
 }

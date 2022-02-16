@@ -37,6 +37,7 @@ namespace MoneyTransfer
                 _investManager.OpenInvestPanel(true);
                 if (gate.gateMath == GateMath.Addition || gate.gateMath == GateMath.Multiplication)
                 {
+                    
                     if (isLeft)
                     {
                         _investManager.LeftHandRenderer(true, gate.sprite, _handBaseControl, gate.gateMath, gate.GetAmount(_handBaseControl.moneyList.Count));
@@ -48,6 +49,7 @@ namespace MoneyTransfer
                 }
                 else
                 {
+                    
                     if (isLeft)
                     {
                         _investManager.LeftHandRenderer(false, gate.sprite, _handBaseControl, gate.gateMath, gate.GetAmount(_handBaseControl.moneyList.Count));
