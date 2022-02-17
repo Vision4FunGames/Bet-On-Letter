@@ -36,6 +36,8 @@ public class UIManager : MonoBehaviour
     void OnGameLose()
     {
         losePanel.SetActive(true);
+        SlotMachineScript sc = FindObjectOfType<SlotMachineScript>();
+        sc.loseGame();
     }
 
     public void OpenPauseMenu()

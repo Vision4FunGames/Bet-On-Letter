@@ -996,12 +996,12 @@ PrefabInstance:
     - target: {fileID: 7402152016489564102, guid: 0fbdad0accd0b45e193a7859757083d3,
         type: 3}
       propertyPath: amount
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7402152016489564102, guid: 0fbdad0accd0b45e193a7859757083d3,
         type: 3}
       propertyPath: gateMath
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7402152016489564102, guid: 0fbdad0accd0b45e193a7859757083d3,
         type: 3}

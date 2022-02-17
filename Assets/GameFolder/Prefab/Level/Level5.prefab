@@ -40,6 +40,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5877798375811198053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4933825713506273329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4442c70f4762a9d40ba1b124613e9f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3518628629422199355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -117,6 +129,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ambulance (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5561257649141582612, guid: a94ebfd924ba1f346a0b40801c3c6b64,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a94ebfd924ba1f346a0b40801c3c6b64, type: 3}
 --- !u!4 &9077322006423722280 stripped
@@ -132,6 +149,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3518628630561029444}
     m_Modifications:
+    - target: {fileID: 1303066733750485643, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1303066733750485646, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
         type: 3}
       propertyPath: gateMath
@@ -209,6 +231,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d, type: 3}
+--- !u!1 &4933825713506273329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8407330176815306816, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3518628631134163057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4933825713506273328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8407330176815306817, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
@@ -602,6 +630,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crown
       objectReference: {fileID: 0}
+    - target: {fileID: 6772612743199287501, guid: 586e7711618450743b59a57d00c2b6db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586e7711618450743b59a57d00c2b6db, type: 3}
 --- !u!4 &1809818304948710786 stripped
@@ -697,6 +730,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3518628630561029444}
     m_Modifications:
+    - target: {fileID: 1246737431458298374, guid: 56aedba71cd12f34696217b6ffef8c9a,
+        type: 3}
+      propertyPath: gateMath
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8643805287885154024, guid: 56aedba71cd12f34696217b6ffef8c9a,
         type: 3}
       propertyPath: m_Name

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using MoneyTransfer;
+using ElephantSDK;
+using GameAnalyticsSDK;
 
 public class SlotMachineScript : MonoBehaviour
 {
@@ -17,6 +19,15 @@ public class SlotMachineScript : MonoBehaviour
     void Start()
     {
         fs = FindObjectOfType<FinishManager>();
+#if UNITY_IOS
+        if (Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            if (ElephantIOS.getConsentStatus() == "Authorized")
+            {
+                GameAnalytics.Initialize();
+            }
+        }
+#endif
     }
     public void StartRotating(int coinValue)
     {
@@ -74,12 +85,45 @@ public class SlotMachineScript : MonoBehaviour
             coinCount = coinValue + 1;
             DOTween.To(() => coinCount, x => coinCount = x, coinCount * valueCount, 2).OnComplete(() => {
                 confetti.SetActive(true);
-                UIManager uimanager = FindObjectOfType<UIManager>();
                 confetti.SetActive(true);
-                uimanager.winPanel.SetActive(true);
+                StartCoroutine(waitForSc());
             });
             isFinish = true;
         });
+    }
+    IEnumerator waitForSc()
+    {
+        yield return new WaitForSeconds(1);
+        UIManager uimanager = FindObjectOfType<UIManager>();
+        uimanager.winPanel.SetActive(true);
+        winGame();
+    }
+
+    public void winGame()
+    {
+#if UNITY_IOS
+            if (Application.platform == RuntimePlatform.IPhonePlayer)
+            {
+                if (ElephantIOS.getConsentStatus() == "Authorized")
+                {
+                    Elephant.LevelCompleted(PlayerPrefs.GetInt("Level"));
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, PlayerPrefs.GetInt("Level").ToString());
+                }
+            }
+#endif
+    }
+    public void loseGame()
+    {
+#if UNITY_IOS
+        if (Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            if (ElephantIOS.getConsentStatus() == "Authorized")
+            {
+                Elephant.LevelFailed(PlayerPrefs.GetInt("Level"));
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, PlayerPrefs.GetInt("Level").ToString());
+            }
+        }
+#endif
     }
     void Update()
     {

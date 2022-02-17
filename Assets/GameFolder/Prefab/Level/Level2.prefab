@@ -37,6 +37,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5999327431074232636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966168633382057908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4442c70f4762a9d40ba1b124613e9f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100061055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -531,6 +543,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2273563756836713853}
     m_Modifications:
+    - target: {fileID: 1303066733750485643, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1303066733750485646, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
         type: 3}
       propertyPath: gateMath
@@ -610,6 +627,12 @@ PrefabInstance:
     - {fileID: 4286138281716471485, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d, type: 3}
     - {fileID: 3240470203498466596, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d, type: 3}
+--- !u!1 &5966168633382057908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8407330176815306816, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2765421842036371444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5966168633382057909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8407330176815306817, guid: 3d8a1d7a6a648ab4384ad61edcd5db0d,

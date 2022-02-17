@@ -437,6 +437,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1742383788846564782}
     m_Modifications:
+    - target: {fileID: 1092006336242017048, guid: b61c36e5b23ede244a0ed090eeba85e4,
+        type: 3}
+      propertyPath: gateMath
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7610573130279845603, guid: b61c36e5b23ede244a0ed090eeba85e4,
         type: 3}
       propertyPath: m_Name
@@ -1191,6 +1196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Candy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730506073158937550, guid: 5ce8714cf8434e54aab9e8be0af651f0,
+        type: 3}
+      propertyPath: gateMath
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce8714cf8434e54aab9e8be0af651f0, type: 3}
