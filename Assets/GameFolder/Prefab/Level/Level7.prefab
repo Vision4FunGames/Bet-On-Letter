@@ -317,6 +317,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8819057042716499423}
     m_Modifications:
+    - target: {fileID: 3334416171651753272, guid: 67ac9e7ac6c3d29418bc4b04302cb484,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5951398966267204681, guid: 67ac9e7ac6c3d29418bc4b04302cb484,
         type: 3}
       propertyPath: myGateType
@@ -951,6 +956,11 @@ PrefabInstance:
         type: 3}
       propertyPath: gateMath
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114307210615548569, guid: 75290a91d3c39fd448a2214e1ea99768,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75290a91d3c39fd448a2214e1ea99768, type: 3}

@@ -19,7 +19,7 @@ public class SlotMachineScript : MonoBehaviour
     void Start()
     {
         fs = FindObjectOfType<FinishManager>();
-#if UNITY_IOS
+//#if UNITY_IOS
         if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
             if (ElephantIOS.getConsentStatus() == "Authorized")
@@ -27,7 +27,7 @@ public class SlotMachineScript : MonoBehaviour
                 GameAnalytics.Initialize();
             }
         }
-#endif
+//#endif
     }
     public void StartRotating(int coinValue)
     {
@@ -36,43 +36,35 @@ public class SlotMachineScript : MonoBehaviour
         {
             case 0:
                 degree = 3600;
-                print("x4");
                 valueCount = 4;
                 break;
             case 1:
                 degree = 3645;
                 valueCount = 7;
-                print("x7");
                 break;
             case 2:
                 degree = 3690;
                 valueCount = 10;
-                print("x10");
                 break;
             case 3:
                 degree = 3735;
                 valueCount = 3;
-                print("x3");
                 break;
             case 4:
                 degree = 3780;
                 valueCount = 5;
-                print("x5");
                 break;
             case 5:
                 degree = 3825;
                 valueCount = 6;
-                print("x6");
                 break;
             case 6:
                 degree = 3870;
                 valueCount = 8;
-                print("x8");
                 break;
             case 7:
                 degree = 3915;
                 valueCount = 2;
-                print("x2");
                 break;
 
             default:
@@ -101,7 +93,7 @@ public class SlotMachineScript : MonoBehaviour
 
     public void winGame()
     {
-#if UNITY_IOS
+//#if UNITY_IOS
             if (Application.platform == RuntimePlatform.IPhonePlayer)
             {
                 if (ElephantIOS.getConsentStatus() == "Authorized")
@@ -110,11 +102,11 @@ public class SlotMachineScript : MonoBehaviour
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, PlayerPrefs.GetInt("Level").ToString());
                 }
             }
-#endif
+//#endif
     }
     public void loseGame()
     {
-#if UNITY_IOS
+//#if UNITY_IOS
         if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
             if (ElephantIOS.getConsentStatus() == "Authorized")
@@ -123,7 +115,7 @@ public class SlotMachineScript : MonoBehaviour
                 GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, PlayerPrefs.GetInt("Level").ToString());
             }
         }
-#endif
+//#endif
     }
     void Update()
     {

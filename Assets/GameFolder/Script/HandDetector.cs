@@ -32,7 +32,7 @@ namespace MoneyTransfer
 
             if (gate != null)
             {
-                print("d");
+                //print("d");
                 VibrationManager.Instance.VibratePop();
                 _investManager.OpenInvestPanel(true);
                 if (gate.gateMath == GateMath.Addition || gate.gateMath == GateMath.Multiplication)

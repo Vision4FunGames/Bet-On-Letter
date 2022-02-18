@@ -442,6 +442,11 @@ PrefabInstance:
       propertyPath: gateMath
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1535599882324365206, guid: b61c36e5b23ede244a0ed090eeba85e4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7610573130279845603, guid: b61c36e5b23ede244a0ed090eeba85e4,
         type: 3}
       propertyPath: m_Name
@@ -1196,6 +1201,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Candy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151965843226249024, guid: 5ce8714cf8434e54aab9e8be0af651f0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8730506073158937550, guid: 5ce8714cf8434e54aab9e8be0af651f0,
         type: 3}

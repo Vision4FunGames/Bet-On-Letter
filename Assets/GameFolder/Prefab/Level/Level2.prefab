@@ -66,6 +66,11 @@ PrefabInstance:
       propertyPath: gateMath
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3601800365775207009, guid: a94ebfd924ba1f346a0b40801c3c6b64,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5561257649141582611, guid: a94ebfd924ba1f346a0b40801c3c6b64,
         type: 3}
       propertyPath: m_RootOrder
@@ -216,6 +221,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2273563756836713853}
     m_Modifications:
+    - target: {fileID: 2488389660700878973, guid: 7cf13f2b86b414b44813a195feaaa988,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4098441930683778534, guid: 7cf13f2b86b414b44813a195feaaa988,
         type: 3}
       propertyPath: amount
@@ -225,6 +235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: gateMath
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098441930683778535, guid: 7cf13f2b86b414b44813a195feaaa988,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6798514808966715656, guid: 7cf13f2b86b414b44813a195feaaa988,
         type: 3}

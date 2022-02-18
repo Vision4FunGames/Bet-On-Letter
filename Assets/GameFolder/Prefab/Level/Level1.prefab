@@ -146,6 +146,11 @@ PrefabInstance:
       propertyPath: gateMath
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4365874121007566587, guid: 2801334ed1bbd1d40b8008ffbe6da164,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4631696465220026248, guid: 2801334ed1bbd1d40b8008ffbe6da164,
         type: 3}
       propertyPath: m_Center.z
@@ -312,6 +317,21 @@ PrefabInstance:
         type: 3}
       propertyPath: gateMath
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945232836201014445, guid: 8b9c1870e391a8042b510c6fd1307d53,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654547566528219170, guid: 8b9c1870e391a8042b510c6fd1307d53,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654547566964904094, guid: 8b9c1870e391a8042b510c6fd1307d53,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5649250760283388240, guid: 8b9c1870e391a8042b510c6fd1307d53,
         type: 3}

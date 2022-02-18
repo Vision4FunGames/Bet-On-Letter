@@ -42,7 +42,7 @@ public class VibrationManager : MonoBehaviour
     {
         if (isActive)
         {
-            Vibration.VibratePop();
+         Vibration.VibratePop();
         }
     }
 }
