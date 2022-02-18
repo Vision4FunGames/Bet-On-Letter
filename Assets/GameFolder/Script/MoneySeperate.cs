@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using MoneyTransfer;
 using UnityEngine.Events;
 
@@ -201,6 +202,8 @@ namespace MoneyTransfer
             yield return new WaitUntil(() => finishManager.isReachedToTarget == true);
             int currentIndex = 0;
             List<Money> finishMoneyList = new List<Money>();
+            Vector3 targetPosition = new Vector3(finishManager.targetPoint.position.x, GameManager.Instance.characterOffsetForFinish + 2, finishManager.targetPoint.position.z);
+            finishManager.player.transform.DOMove(targetPosition,0.1f);
 
             for (int i = 0; i < managerMoneyList.Count; i++)
             {
@@ -234,6 +237,7 @@ namespace MoneyTransfer
                 money.JumpToFinishLine(finishManager, i);
                 yield return delayForFinish;
             }
+
             //finishManager.MoneyTranferProcessDone();
         }
 

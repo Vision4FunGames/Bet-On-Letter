@@ -12,7 +12,7 @@ namespace MoneyTransfer
         public List<Money> finishMoneyList = new List<Money>();
         public Transform targetPoint;
         public Transform slotMachineEntry;
-        [SerializeField] Transform player;
+        public Transform player;
         private const float high = 0.1f;
         private WaitForSeconds delay = new WaitForSeconds(0.01f);
         [HideInInspector]
@@ -54,7 +54,7 @@ namespace MoneyTransfer
             {
                 money.gameObject.SetActive(false);
             }
-            
+
             //Vector3 targetPosition = targetPoint.position;
             //if (finishMoneyList.Count == 0)
             //{
@@ -96,18 +96,18 @@ namespace MoneyTransfer
 
         private void RefreshPlayerPosition()
         {
-            if (finishMoneyList.Count == 0) return;
-            Vector3 targetPosition = new Vector3(targetPoint.position.x, GameManager.Instance.characterOffsetForFinish + currentHeight, targetPoint.position.z);
-            player.position = Vector3.Lerp(player.position, targetPosition, 3 * Time.deltaTime);
-            player.position = new Vector3(player.position.x, Mathf.Clamp(player.position.y, -maxHeight, maxHeight), player.position.z);
-            if(player.position.y + 0.25f >= maxHeight)
-            {
-                isMaxHeight = true;
-            }
-            else
-            {
-                isMaxHeight = false;
-            }
+            //if (finishMoneyList.Count == 0) return;
+            //Vector3 targetPosition = new Vector3(targetPoint.position.x, GameManager.Instance.characterOffsetForFinish + currentHeight, targetPoint.position.z);
+            //player.position = Vector3.Lerp(player.position, targetPosition, 3 * Time.deltaTime);
+            //player.position = new Vector3(player.position.x, Mathf.Clamp(player.position.y, -maxHeight, maxHeight), player.position.z);
+            //if (player.position.y + 0.25f >= maxHeight)
+            //{
+            //    isMaxHeight = true;
+            //}
+            //else
+            //{
+            //    isMaxHeight = false;
+            //}
         }
     }
 }
