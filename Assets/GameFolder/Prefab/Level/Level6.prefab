@@ -578,6 +578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagnetRight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4520190978489775766, guid: 5a1d6b49d6a8a6945b35c4b1bf7d41a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a1d6b49d6a8a6945b35c4b1bf7d41a9, type: 3}
 --- !u!4 &5691197930690542636 stripped
