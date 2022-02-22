@@ -87,6 +87,24 @@ namespace MoneyTransfer
                 VibrationManager.Instance.VibratePop();
                 _moneySeparate.HandleMoney2(_handBaseControl, ms.transform.GetChild(2).gameObject, GateMath.Minus, 2, true);
             }
+            if(other.CompareTag("tutorialharf"))
+            {
+                TutorialManager tl = FindObjectOfType<TutorialManager>();
+                tl.tutorialHarf.SetActive(true);
+                Time.timeScale = 0;
+            }
+            if(other.CompareTag("tutotestere"))
+            {
+                TutorialManager tl = FindObjectOfType<TutorialManager>();
+                tl.tutorialTestere.SetActive(true);
+                Time.timeScale = 0;
+            }
+            if (other.CompareTag("tutomagnet"))
+            {
+                TutorialManager tl = FindObjectOfType<TutorialManager>();
+                tl.tutorialmagnet.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
 
         private void OnTriggerExit(Collider other)

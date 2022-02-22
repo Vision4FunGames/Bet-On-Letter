@@ -20,6 +20,9 @@ TagManager:
   - textGate
   - canvasMain
   - MainCanvas
+  - tutorialharf
+  - tutotestere
+  - tutomagnet
   layers:
   - Default
   - TransparentFX
