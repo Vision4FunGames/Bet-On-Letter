@@ -19,7 +19,7 @@ public class SlotMachineScript : MonoBehaviour
     void Start()
     {
         fs = FindObjectOfType<FinishManager>();
-#if UNITY_IOS
+//#if UNITY_IOS
         if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
             if (ElephantIOS.getConsentStatus() == "Authorized")
@@ -27,7 +27,7 @@ public class SlotMachineScript : MonoBehaviour
                 GameAnalytics.Initialize();
             }
         }
-#endif
+//#endif
     }
     public void StartRotating(int coinValue)
     {
@@ -74,6 +74,7 @@ public class SlotMachineScript : MonoBehaviour
         slotpart2.transform.DORotate(new Vector3(degree, 180, 0), 3f, RotateMode.FastBeyond360).SetEase(Ease.InOutCirc).SetDelay(0.5f);
         slotpart3.transform.DORotate(new Vector3(degree, 180, 0), 3f, RotateMode.FastBeyond360).SetEase(Ease.InOutCirc).SetDelay(1).OnComplete(() =>
         {
+            fs.handPlayer.GetComponent<Animator>().enabled = true;
             coinCount = coinValue + 1;
             DOTween.To(() => coinCount, x => coinCount = x, coinCount * valueCount, 2).OnComplete(() => {
                 confetti.SetActive(true);
@@ -93,7 +94,7 @@ public class SlotMachineScript : MonoBehaviour
 
     public void winGame()
     {
-#if UNITY_IOS
+//#if UNITY_IOS
             if (Application.platform == RuntimePlatform.IPhonePlayer)
             {
                 if (ElephantIOS.getConsentStatus() == "Authorized")
@@ -102,11 +103,11 @@ public class SlotMachineScript : MonoBehaviour
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, PlayerPrefs.GetInt("Level").ToString());
                 }
             }
-#endif
+//#endif
     }
     public void loseGame()
     {
-#if UNITY_IOS
+//#if UNITY_IOS
         if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
             if (ElephantIOS.getConsentStatus() == "Authorized")
@@ -115,7 +116,7 @@ public class SlotMachineScript : MonoBehaviour
                 GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, PlayerPrefs.GetInt("Level").ToString());
             }
         }
-#endif
+//#endif
     }
     void Update()
     {

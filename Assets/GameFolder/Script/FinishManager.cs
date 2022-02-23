@@ -24,6 +24,7 @@ namespace MoneyTransfer
         public float finishHigh;
         public TextMeshProUGUI slotMachineText;
         public int slotMachineCount;
+        public GameObject handPlayer;
 
         private void Start()
         {

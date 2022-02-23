@@ -8,7 +8,6 @@ namespace MoneyTransfer
 {
     public class GameManager : MonoBehaviour
     {
-
         public static GameManager Instance;
         [Range(0f, 1f)]
         public float high; 
@@ -83,6 +82,4 @@ namespace MoneyTransfer
             Time.timeScale = 1;
         }
     }
-
-
 }

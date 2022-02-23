@@ -100,7 +100,9 @@ namespace MoneyTransfer
                     {
                         Money money = _objectPool.GetMoney();
                         money.handStackControl = handBaseControl;
-                        money.transform.localPosition = new Vector3(handBaseControl.handPoint.localPosition.x, handBaseControl.currentHeight, handBaseControl.handPoint.localPosition.z);
+                        money.transform.localPosition = new Vector3(handBaseControl.handPoint.localPosition.x, handBaseControl.currentHeight+10f, handBaseControl.handPoint.localPosition.z);
+                        money.transform.GetChild(1).transform.localPosition = new Vector3(0, 10f, 0);
+                        money.transform.GetChild(1).DOLocalMove(Vector3.zero,0.5f);
                         AddToManagerList(money);
                         if (money != null) handBaseControl.AddToList(money);
                     }

@@ -34,8 +34,8 @@ namespace MoneyTransfer
 
         //--------------------------------------------------------------//
         [Header("Process Timing Parameter")]
-        [SerializeField] private float moveDuration = 0.5f;
-        [SerializeField] private float waitAfterProcess = 0.5f;
+        [SerializeField] private float moveDuration = 0f;
+        [SerializeField] private float waitAfterProcess = 0f;
 
 
         private bool isPanoMovement = false;
@@ -128,7 +128,7 @@ namespace MoneyTransfer
         IEnumerator RightHandInvestProcess(Transform[] path, GameObject textComponent, HandStackControl handStackControl, GateMath gateMath, float amount)
         {
             Transform rightHand = rightInvestArrow.transform;
-            yield return new WaitUntil(() => isPanoMovement == true);
+            //yield return new WaitUntil(() => isPanoMovement == true);
             rightRenderer.positionCount = 1;
             rightRenderer.SetPosition(0, path[0].localPosition);
 
@@ -190,7 +190,7 @@ namespace MoneyTransfer
         IEnumerator LeftHandInvestProcess(Transform[] path, GameObject textComponent, HandStackControl handStackControl, GateMath gateMath, float amount)
         {
             Transform leftHand = leftInvestArrow.transform;
-            yield return new WaitUntil(() => isPanoMovement == true);
+            //yield return new WaitUntil(() => isPanoMovement == true);
             leftRenderer.positionCount = 1;
             leftRenderer.SetPosition(0, path[0].localPosition);
 
