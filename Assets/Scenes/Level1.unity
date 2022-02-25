@@ -531,6 +531,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1720846521867535410, guid: 812c5506d0179e9469ef91903b06149e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.7834929
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720846521867535410, guid: 812c5506d0179e9469ef91903b06149e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.8627343
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720846521867535410, guid: 812c5506d0179e9469ef91903b06149e,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.21382158
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720846521867535410, guid: 812c5506d0179e9469ef91903b06149e,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.6613287
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720846521867535410, guid: 812c5506d0179e9469ef91903b06149e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1.5999756
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720846521867535410, guid: 812c5506d0179e9469ef91903b06149e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -119.100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720846521867535410, guid: 812c5506d0179e9469ef91903b06149e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720846521867535410, guid: 812c5506d0179e9469ef91903b06149e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 58
+      objectReference: {fileID: 0}
     - target: {fileID: 1720846522588383837, guid: 812c5506d0179e9469ef91903b06149e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10056,8 +10096,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 1
   currentLevelScriptable: {fileID: 0}
-  isManuel: 0
-  levelIndex: 2
+  isManuel: 1
+  levelIndex: 4
 --- !u!1 &1698566930
 GameObject:
   m_ObjectHideFlags: 0
